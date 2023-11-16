@@ -45,21 +45,21 @@ try {
 }
 
 const config = {
-  env: envVars.NODE_ENV,
-  port: envVars.API_PORT,
-  publicUrl: envVars.PUBLIC_URL,
+  env: process.env.NODE_ENV,
+  port: process.env.API_PORT,
+  publicUrl: process.env.PUBLIC_URL,
   postgresDb: {
-    host: envVars.POSTGRES_HOST,
-    port: envVars.POSTGRES_PORT,
-    testsPort: envVars.POSTGRES_TESTS_PORT,
-    username: envVars.POSTGRES_USER,
-    password: envVars.POSTGRES_PASSWORD,
-    database: envVars.POSTGRES_DATABASE,
+    host: process.env.POSTGRES_HOST,
+    port: process.env.POSTGRES_PORT,
+    testsPort: process.env.POSTGRES_TESTS_PORT,
+    username: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
+    database: process.env.POSTGRES_DATABASE,
   },
-  saltWorkFactor: envVars.SALT_WORK_FACTOR,
-  accessTokenTtl: envVars.ACCESS_TOKEN_TTL,
-  refreshTokenTtl: envVars.REFRESH_TOKEN_TTL,
-  jwtSecret: envVars.JWT_SECRET,
+  saltWorkFactor: process.env.SALT_WORK_FACTOR,
+  accessTokenTtl: process.env.ACCESS_TOKEN_TTL,
+  refreshTokenTtl: process.env.REFRESH_TOKEN_TTL,
+  jwtSecret: process.env.JWT_SECRET,
 };
 
 console.log(config);
