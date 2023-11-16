@@ -29,4 +29,6 @@ const options: Options = {
   factories: ['./src/database/factories/**/*{.ts,.js}'],
 };
 
+console.log(options);
+
 export = options;
