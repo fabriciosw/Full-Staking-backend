@@ -64,4 +64,4 @@ const config = {
 
 console.log(config);
 
-export default config;
+export default config as any;

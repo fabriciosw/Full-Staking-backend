@@ -13,7 +13,7 @@
     "add-build": "git add dist",
     "postgres:up": "docker-compose -f docker.yml up",
     "clean": "rimraf ./dist",
-    "build": "npm run clean && rimraf dist && tsc",
+    "build": "npm run clean && tsc",
     "start": "npm run typeorm:deploy:run && node ./dist/src/index.js",
     "dev": "ts-node-dev --transpile-only --respawn --inspect=9229 src/index.ts",
     "test": "cross-env NODE_ENV=test DOTENV_CONFIG_PATH=.env.test jest --detectOpenHandles --runInBand",
