@@ -10,12 +10,6 @@ const options: Options = {
   username: config.postgresDb.username,
   password: config.postgresDb.password,
   database: config.postgresDb.database,
-  ssl: true,
-  extra: {
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  },
   logger: 'advanced-console',
   cli: {
     entitiesDir: './src/database/entities',
@@ -28,7 +22,5 @@ const options: Options = {
   seeds: ['./src/database/seeds/**/*{.ts,.js}'],
   factories: ['./src/database/factories/**/*{.ts,.js}'],
 };
-
-console.log(options);
 
 export = options;
