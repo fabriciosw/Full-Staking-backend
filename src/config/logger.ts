@@ -6,7 +6,7 @@ const logFormat = format.printf(({ level, message, timestamp, stack }) => {
 });
 
 export default createLogger({
-  level: config.env === environments.DEVELOPMENT ? 'debug' : 'error',
+  level: config.env === environments.DEVELOPMENT ? 'debug' : 'debug',
   format:
     config.env === environments.DEVELOPMENT
       ? format.combine(
@@ -20,6 +20,6 @@ export default createLogger({
           format.errors({ stack: true }),
           format.json()
         ),
-  defaultMeta: { service: 'quickstart-service' },
+  defaultMeta: { service: 'service' },
   transports: [new transports.Console()],
 });

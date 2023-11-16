@@ -31,7 +31,7 @@ const envVarsSchema = yup
     POSTGRES_TESTS_PORT: yup.number().default(5433),
     POSTGRES_USER: yup.string(), // .required('POSTGRES_USER is required'),
     POSTGRES_PASSWORD: yup.string(), // .required('POSTGRES_PASSWORD is required'),
-    POSTGRES_DB: yup.string(), // .required('POSTGRES_DB is required'),
+    POSTGRES_DATABASE: yup.string(), // .required('POSTGRES_DB is required'),
   })
   .noUnknown();
 
@@ -54,7 +54,7 @@ const config = {
     testsPort: envVars.POSTGRES_TESTS_PORT,
     username: envVars.POSTGRES_USER,
     password: envVars.POSTGRES_PASSWORD,
-    database: envVars.POSTGRES_DB,
+    database: envVars.POSTGRES_DATABASE,
   },
   saltWorkFactor: envVars.SALT_WORK_FACTOR,
   accessTokenTtl: envVars.ACCESS_TOKEN_TTL,
