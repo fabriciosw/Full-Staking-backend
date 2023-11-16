@@ -4,12 +4,17 @@ import swaggerDocs from './config/swagger';
 import config, { environments } from './config/config';
 import app from './app';
 
+console.log('antes do listen');
 app.listen(config.port, async () => {
-  logger.info(`API rodando em http://${config.publicUrl}:${config.port}`);
+  try {
+    logger.info(`API rodando em http://${config.publicUrl}:${config.port}`);
 
-  await database();
+    await database();
 
-  if (config.env !== environments.PRODUCTION) {
-    swaggerDocs(app, config.publicUrl, config.port);
+    if (config.env !== environments.PRODUCTION) {
+      swaggerDocs(app, config.publicUrl, config.port);
+    }
+  } catch (e) {
+    console.log(e);
   }
 });
