@@ -15,6 +15,6 @@ app.listen(config.port, async () => {
       swaggerDocs(app, config.publicUrl, config.port);
     }
   } catch (e) {
-    console.log(e);
+    console.log(`ERRO listen: ${e}`);
   }
 });
